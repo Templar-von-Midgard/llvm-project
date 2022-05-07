@@ -5986,6 +5986,9 @@ const ToolChain &Driver::getToolChain(const ArgList &Args,
     case llvm::Triple::ShaderModel:
       TC = std::make_unique<toolchains::HLSLToolChain>(*this, Target, Args);
       break;
+    case llvm::Triple::BareMetal:
+      TC = std::make_unique<toolchains::BareMetal>(*this, Target, Args);
+      break;
     default:
       // Of these targets, Hexagon is the only one that might have
       // an OS of Linux, in which case it got handled above already.

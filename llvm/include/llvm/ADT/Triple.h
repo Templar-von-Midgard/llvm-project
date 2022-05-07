@@ -211,7 +211,8 @@ public:
     WASI,       // Experimental WebAssembly OS
     Emscripten,
     ShaderModel, // DirectX ShaderModel
-    LastOSType = ShaderModel
+    BareMetal,
+    LastOSType = BareMetal
   };
   enum EnvironmentType {
     UnknownEnvironment,
